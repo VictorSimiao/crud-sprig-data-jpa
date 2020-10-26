@@ -11,7 +11,19 @@
 
 <body>
     <div class="container">
-        <h4>Crud com Spring-data-jpa</h4><br />
+        <h1>Crud com Spring-data-jpa</h1><br />
+        <h5>Adicionar novo Usuário</h5>
+        <form th:action="@{/cadastro}" method="post" th:object="${usuario}" class="mb-5">
+            Nome:<br />
+            <input type="text" class="form-control" th:field="*{nome}" />
+            <br /> Sobrenome:<br />
+            <input type="text" class="form-control" th:field="*{sobrenome}" />
+            <br /> Email:
+            <br />
+            <input type="text" class="form-control" th:field="*{email}" />
+            <br />
+            <button type="submit" class="btn btn-dark">Cadastrar</button>
+        </form>
         <h5>Lista de Usuários</h5>
         <table class="table table-bordered">
             <thead>
@@ -37,19 +49,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <h5>Adicionar novo Usuário</h5>
-        <form th:action="@{/cadastro}" method="post" th:object="${usuario}">
-            Nome:<br />
-            <input type="text" class="form-control" th:field="*{nome}" />
-            <br /> Sobrenome:<br />
-            <input type="text" class="form-control" th:field="*{sobrenome}" />
-            <br /> Email:
-            <br />
-            <input type="text" class="form-control" th:field="*{email}" />
-            <br />
-            <button type="submit" class="btn btn-dark">Cadastrar</button>
-        </form>
     </div>
 
 

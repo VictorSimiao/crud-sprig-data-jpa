@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.victorreis.crud.model.Usuario;
-import br.com.victorreis.crud.repository.UsuarioRepository;
 import br.com.victorreis.crud.service.UsuarioService;
 
-@RequestMapping("/")
+
 @Controller
 public class UsuarioController {
     @Autowired
@@ -31,10 +30,15 @@ public class UsuarioController {
         usuarioService.save(usuario);
         return "redirect:/";
     }
-    @GetMapping("delete")
+    @GetMapping("/delete")
     private String delete(@RequestParam("id") Integer id){
         usuarioService.delete(id);
         return "redirect:/";
+    }
+    @GetMapping("/edita")
+    private String update(@RequestParam("id") Integer id,Model model){
+        model.addAttribute("usuario", usuarioService.buscarPorId(id));
+        return "usuario";
     }
 
 }

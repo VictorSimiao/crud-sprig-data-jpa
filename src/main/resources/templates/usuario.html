@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+    <div class="container">
+        <h5>Informações do Usuário</h5>
+        <form th:action="@{/cadastro}" method="post" th:object="${usuario}">
+            Nome:<br/>
+            <input type="text" class="form-control" th:field="*{nome}" />
+            <br/> Sobrenome:<br/>
+            <input type="text" class="form-control" th:field="*{sobrenome}" />
+            <br/> Email:
+            <br/>
+            <input type="text" class="form-control" th:field="*{email}" />
+            <br/>
+            <input type="hidden" name="id" th:field="*{id}" />
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+        </form>
+    </div>
+</body>
+
+</html>
