@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,13 +31,13 @@ public class UsuarioController {
         usuarioService.save(usuario);
         return "redirect:/";
     }
-    @GetMapping("/delete")
-    private String delete(@RequestParam("id") Integer id){
+    @GetMapping("/delete/{id}")
+    private String delete(@PathVariable("id") Integer id){
         usuarioService.delete(id);
         return "redirect:/";
     }
-    @GetMapping("/edita")
-    private String update(@RequestParam("id") Integer id,Model model){
+    @GetMapping("/edita/{id}")
+    private String update(@PathVariable("id") Integer id,Model model){
         model.addAttribute("usuario", usuarioService.buscarPorId(id));
         return "usuario";
     }
