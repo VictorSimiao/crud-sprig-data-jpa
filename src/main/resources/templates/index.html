@@ -42,8 +42,8 @@
                     <td th:text="${usuario.sobrenome}"></td>
                     <td th:text="${usuario.email}"></td>
                     <td>
-                        <a th:href="@{/edita?(id=${usuario.id})}" class="btn btn-success btn-sm" role="button">Editar</a>
-                        <a th:href="@{/delete?(id=${usuario.id})}" class="btn btn-danger btn-sm" role="button">Deletar</a>
+                        <a th:href="@{/edita/{id}(id=${usuario.id})}" class="btn btn-success btn-sm" role="button">Editar</a>
+                        <a th:href="@{/delete/{id}(id=${usuario.id})}" class="btn btn-danger btn-sm" role="button">Deletar</a>
                     </td>
 
                 </tr>
