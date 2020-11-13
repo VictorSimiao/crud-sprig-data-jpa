@@ -2,9 +2,9 @@
 ![](https://img.shields.io/github/languages/count/VictorSimiao/crud-sprig-data-jpa) ![](https://img.shields.io/github/languages/top/VictorSimiao/crud-sprig-data-jpa) ![](https://img.shields.io/github/last-commit/VictorSimiao/crud-sprig-data-jpa) ![](https://img.shields.io/github/repo-size/VictorSimiao/crud-sprig-data-jpa)![](https://github.com/VictorSimiao/crud-sprig-data-jpa/blob/main/github/telacrud.png?raw=true)
 
 # 📑Indice
-- [Sobre](#-sobre)
-- [Operações que são realizadas](#-Operações-que-são-realizadas)
-- [Tecnologias ultilizadas](#-Tecnologias-ultilizadas)
+- [Sobre](#sobre)
+- [Operações que são realizadas](#Operações-que-são-realizadas)
+- [Tecnologias ultilizadas](#Tecnologias-ultilizadas)
 - [Como baixar o projeto](#Como-baixar-o-projeto)
 
 
