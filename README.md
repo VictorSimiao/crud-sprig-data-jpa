@@ -12,7 +12,7 @@
 CRUD desenvolvido para aplicar algumas funcionalidades do **Spring Data JPA**.
 
 ---
-## 💻Operações que são realizadas:
+## 💻Operações que são realizadas
 - Cadastrar usuário
 - Alterar usuário
 - Excluir usuário
